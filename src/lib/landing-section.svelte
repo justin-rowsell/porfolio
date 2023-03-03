@@ -11,7 +11,6 @@
         const myScene = new MyScene(el);
         const branch = new GltfObj(myScene.scene, '/3d/scene.gltf');
         myScene.animate();
-        
     });
 </script>
 <div class="container h-screen flex flex-row  justify-center

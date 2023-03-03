@@ -10,8 +10,10 @@ export class GltfObj {
 
 
     private _scene: Scene;
+    // private _animateFunc: Function;
     constructor(scene: Scene, gltfPath: string) {
         this._scene = scene;
+        // this._animateFunc = animate;
         // Instantiate a loader
         const loader = new GLTFLoader();;
         // Load a glTF resource
@@ -26,6 +28,7 @@ export class GltfObj {
 	    this.scenes = gltf.scenes;
 	    this.cameras = gltf.cameras;
 	    this.asset = gltf.asset;
+        // this._animateFunc();
     }
 
     private _handleLoading(xhr: ProgressEvent) {

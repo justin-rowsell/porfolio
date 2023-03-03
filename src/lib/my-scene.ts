@@ -7,13 +7,15 @@ export class MyScene {
 
     constructor(el: Element) {
         this.scene = new Scene();
-        this.camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        this.camera = new PerspectiveCamera();
+        // this.camera = new PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 1000);
         
         // this.scene.add(obj);
         this.camera.position.z = 5;
         
         
         this.renderer = new WebGLRenderer({ antialias: true, canvas: el });
+        // this.animate();
     }
 
     resize(): void {
@@ -26,7 +28,7 @@ export class MyScene {
     }
 
     animate() {
-        // requestAnimationFrame(this.animate);
+        requestAnimationFrame(this.animate.bind(this));
         this.renderer.render(this.scene, this.camera);
     };
 }
