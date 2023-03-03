@@ -1,5 +1,18 @@
 <script lang="ts">
     import headshot from '$lib/assets/headshot.jpg';  
+	import { onMount } from 'svelte';
+	import { GltfObj } from './gltf-obj';
+	import { MyScene } from './my-scene';
+
+
+    let el: Element;
+
+    onMount(() => {
+        const myScene = new MyScene(el);
+        const branch = new GltfObj(myScene.scene, '/3d/scene.gltf');
+        myScene.animate();
+        
+    });
 </script>
 <div class="container h-screen flex flex-row  justify-center
             lg:p-32 md:p-16 sm:p-8 flex flex-rowlg:p-32 md:p-16 sm:p-8">
@@ -14,3 +27,4 @@
         </p>
     </div>
 </div>
+<canvas class="w-full h-full" bind:this={el}></canvas>
