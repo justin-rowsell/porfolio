@@ -18,7 +18,7 @@
           <a href="https://github.com/justin-rowsell/portfolio" target="_blank" rel="noreferrer" 
           class="block mt-4 sm:inline-block sm:mt-0 text-main hover:text-darkAccent mr-4 font-mono">
             <span class="material-symbols-outlined align-bottom text-base">code</span> 
-            <span class="text-md">Source Code</span>
+            <span class="text-md cursor-pointer">Source Code</span>
           </a>
         </div>
     </div>

@@ -8,6 +8,6 @@
 
 <style lang="postcss">
   :global(html) {
-    background-color: theme(colors.white);
+    background-color: theme(colors.lightShade);
   }
 </style>

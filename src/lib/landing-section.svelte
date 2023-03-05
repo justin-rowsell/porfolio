@@ -9,13 +9,14 @@
 
     onMount(() => {
         const myScene = new MyScene(el);
-        myScene.resizeOnResize(); // tell it to resize with the window
         const branch = new GltfObj(myScene, '/3d/scene.gltf');
         myScene.animate();
+        myScene.resizeOnResize(); // tell it to resize with the window
     });
 </script>
-<div class="container h-screen flex flex-row  justify-center
-            lg:p-32 md:p-16 sm:p-8 flex flex-rowlg:p-32 md:p-16 sm:p-8">
+<canvas class="absolute top-3 right-0 w-4/6 -z-50" bind:this={el}></canvas>
+<div class="absolute container h-screen flex flex-row  justify-center
+            lg:p-36 md:p-16 sm:p-8 flex flex-rowlg:p-32 md:p-16 sm:p-8">
     <img src="{headshot}" alt="Justin Rowsell Headshot" 
         class="w-36 h-36 rounded-full object-cover flex mr-8">
     <div>
@@ -27,4 +28,3 @@
         </p>
     </div>
 </div>
-<canvas class="w-full h-full" bind:this={el}></canvas>

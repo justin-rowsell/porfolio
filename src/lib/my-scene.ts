@@ -21,6 +21,7 @@ export class MyScene {
         const ambientLight = new AmbientLight(0xffffff);
         this.scene.add(pointLight, ambientLight);
         this.clock = new Clock();
+        window.addEventListener('resize', this.resize.bind(this));
     }
 
     resize(): void {
@@ -29,7 +30,6 @@ export class MyScene {
         this.camera.updateProjectionMatrix();
     }
     resizeOnResize(): void {
-        window.addEventListener('resize', this.resize);
     }
 
     animate() {

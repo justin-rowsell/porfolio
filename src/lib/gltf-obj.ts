@@ -22,21 +22,19 @@ export class GltfObj {
     }
 
     private _handleLoad(gltf: GLTF) {
-        const scale = 50;
+        const scale = 25;
         const gltfScene = gltf.scene;
         gltfScene.children.forEach((mesh) => mesh.scale.set(scale, scale, scale));
-        gltfScene.position.setX(25);
-        gltfScene.position.setY(5);
+        gltfScene.position.setX(30);
+        gltfScene.position.setY(15);
         gltfScene.position.setZ(0);
 
         this._myScene.scene.add(gltf.scene);
 
         const mixer = new AnimationMixer(gltfScene);
-        // const animationOne = mixer.clipAction( gltf.animations[ 2 ] ).play();
-        // animationOne.setLoop(THREE.LoopOnce, 1);
-		const animationTwo = mixer.clipAction( gltf.animations[0] ).play();
-        animationTwo.setLoop(LoopOnce, 1);
-        // mixer.clipAction( gltf.animations[0] ).play(); // end on this one
+		const animation = mixer.clipAction( gltf.animations[0] ).play().warp(1, 0, 4.5);
+        animation.setLoop(LoopOnce, 1);
+        animation.clampWhenFinished = true;
         this._myScene.mixer = mixer;
         
 	    this.animations = gltf.animations;
