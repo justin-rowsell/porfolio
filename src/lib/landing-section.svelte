@@ -9,7 +9,8 @@
 
     onMount(() => {
         const myScene = new MyScene(el);
-        const branch = new GltfObj(myScene.scene, '/3d/scene.gltf');
+        myScene.resizeOnResize(); // tell it to resize with the window
+        const branch = new GltfObj(myScene, '/3d/scene.gltf');
         myScene.animate();
     });
 </script>
