@@ -25,7 +25,7 @@ export class GltfObj {
         const scale = 25;
         const gltfScene = gltf.scene;
         gltfScene.children.forEach((mesh) => mesh.scale.set(scale, scale, scale));
-        gltfScene.position.setX(30);
+        gltfScene.position.setX(32);
         gltfScene.position.setY(15);
         gltfScene.position.setZ(0);
 
