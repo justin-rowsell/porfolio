@@ -10,6 +10,9 @@ module.exports = {
         main: '#DC0000',
         darkAccent: '#850000',
         darkShade: '#141318',
+        danger: '#F44336',
+        success: '#777A38',
+        warning: '#F56A00'
       },
     },
   },
