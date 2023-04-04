@@ -20,6 +20,11 @@
             <span class="material-symbols-outlined align-bottom text-base">code</span> 
             <span class="text-md cursor-pointer">Source Code</span>
           </a>
+          <a href="/contact" target="_blank" rel="noreferrer" 
+          class="block mt--0 sm:inline-block text-main hover:text-darkAccent mr-4 font-mono">
+            <span class="material-symbols-outlined align-bottom text-base">chat</span> 
+            <span class="text-md cursor-pointer">Contact Me</span>
+          </a>
         </div>
     </div>
 </nav>
