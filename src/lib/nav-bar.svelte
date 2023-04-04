@@ -1,11 +1,12 @@
 <script lang="ts">
   import logo from '$lib/assets/LogoTransparent.png';  
+	import NavLink from './nav-link.svelte';
 </script>
 
 <nav class="flex items-center justify-between flex-wrap p-6 mb-5">
     <div class="flex items-center flex-shrink-0 mr-6">
       <a href="/">
-        <img class="h-6 mr-3 sm:h-9" src="{logo}" alt="Easy as logo"/>
+        <img class="h-6 mr-3 sm:h-9" src="{logo}" alt="Aquaberry Icon"/>
       </a>
     </div>
     <!-- <div class="block sm:hidden">
@@ -15,16 +16,8 @@
     </div> -->
     <div class="block flex-grow md:flex md:items-center md:justify-center sm:hidden">
         <div class="text-sm md:flex-grow">
-          <a href="https://github.com/justin-rowsell/portfolio" target="_blank" rel="noreferrer" 
-          class="block mt--0 sm:inline-block text-main hover:text-darkAccent mr-4 font-mono">
-            <span class="material-symbols-outlined align-bottom text-base">code</span> 
-            <span class="text-md cursor-pointer">Source Code</span>
-          </a>
-          <a href="/contact" target="_blank" rel="noreferrer" 
-          class="block mt--0 sm:inline-block text-main hover:text-darkAccent mr-4 font-mono">
-            <span class="material-symbols-outlined align-bottom text-base">chat</span> 
-            <span class="text-md cursor-pointer">Contact Me</span>
-          </a>
+          <NavLink link={'/contact'} iconCode={'chat'} linkText={'Contact Me'} />
+          <NavLink link={'https://github.com/justin-rowsell'} iconCode={'code'} linkText={'Github'} />
         </div>
     </div>
 </nav>

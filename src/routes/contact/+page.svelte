@@ -19,17 +19,18 @@
         </div>
         <div class="flex flex-col mb-4">
             <!--Div to show message feedback to users after submitting their info-->
-            {#if showSuccessMessage}
-                <div class="flex flex-col mb-4">
-                    <p class="text-left font-bold text-success">{userMessage}</p>
-                </div>
-            {/if}
             {#if showDangerMessage}
                 <div class="flex flex-col mb-4">
                     <p class="text-left font-bold text-danger">{userMessage}</p>
                 </div>
             {/if} 
-            <button on:click={submitContactForm}
+            <!--show spinner when submit is disabled-->
+            {#if disabled}
+                <div class="ml-auto mr-auto mb-4">
+                    <Spinner></Spinner>
+                </div>
+            {/if}
+            <button on:click={submitContactForm} {disabled}
                 class="bg-main hover:bg-darkAccent text-white font-bold py-2 px-4 rounded" type="submit">
                 Submit
             </button>
@@ -38,6 +39,7 @@
 </div>
 
 <script lang="ts">
+    import Spinner from "$lib/spinner.svelte";
 	import { goto } from '$app/navigation';
     import { PUBLIC_CONTACT_API } from '$env/static/public';
     let name: string = '';
@@ -45,34 +47,46 @@
     let company: string = '';
     let message: string = '';
     let userMessage: string;
-    let showSuccessMessage = false;
     let showDangerMessage = false;
+    let disabled = false;
 
     async function submitContactForm(e: Event) {
-        e.preventDefault();
-        if (!validateForm()) {
-            toggleUserMessage(false, 'Please fill out all fields and try again.')
-            return;
+        // disable the submit button while we handle the event
+        disabled = true;
+        try {
+            e.preventDefault();
+            if (!validateForm()) {
+                toggleUserMessage(true, 'Please fill out all fields and try again.')
+                return;
+            }
+            // get api url from public env variable
+            const url = PUBLIC_CONTACT_API;
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name,
+                    source: "Portfolio",
+                    email,
+                    company,
+                    message
+                })
+            });
+            if (response.status === 200) {
+                goto(`/contact/success`, { replaceState: true });
+                return;
+            } else {
+                toggleUserMessage(true, 'Something went wrong. Please try again.');
+            }
         }
-        // get api url from public env variable
-        const url = PUBLIC_CONTACT_API;
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name,
-                source: "Portfolio",
-                email,
-                company,
-                message
-            })
-        });
-        if (response.status === 200) {
-            goto(`/contact/success`, { replaceState: true });
-        } else {
-            toggleUserMessage(false, 'Something went wrong. Please try again.');
+        catch (error) {
+            console.error(error);
+            toggleUserMessage(true, 'Something went wrong. Please try again.');
+        }
+        finally {
+            disabled = false;
         }
     }
 
@@ -85,14 +99,8 @@
         return true;
     }
 
-    function toggleUserMessage(success: boolean, message: string) {
-        if (success) {
-            showSuccessMessage = true;
-            showDangerMessage = false;
-        } else {
-            showSuccessMessage = false;
-            showDangerMessage = true;
-        }
+    function toggleUserMessage(show: boolean, message: string) {
         userMessage = message;
+        showDangerMessage = show;
     }
 </script>
