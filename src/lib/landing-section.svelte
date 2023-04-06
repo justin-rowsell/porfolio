@@ -1,5 +1,5 @@
 <script lang="ts">
-    import headshot from '$lib/assets/headshot.jpg';  
+    import headshot from '$lib/assets/headshot.png';  
 	import { onMount } from 'svelte';
 	import { GltfObj } from './gltf-obj';
 	import { MyScene } from './my-scene';
