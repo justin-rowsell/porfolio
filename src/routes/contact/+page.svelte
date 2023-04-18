@@ -1,13 +1,13 @@
-<div class="lg:w-1/2 md:w-3/4 sm:11/12 m-auto shadow-xl p-4 bg-lightShade"> 
+<div class="lg:w-1/2 md:w-3/4 w-11/12 m-auto shadow-xl p-4 bg-lightShade"> 
     <h1 class="text-2xl font-bold text-center text-darkShade">Contact Me</h1>
-    <p class="text-left text-darkShade">Interested in working together? You can reach me here. Or just say hi (I'm a person)?</p>
+    <p class="text-left text-darkShade">Interested in working together? You can reach me here. Or just say hi (I'm a person)!</p>
     <form class="mt-4" id="contactForm">
         <label class="mb-2 font-bold text-md text-darkShade" for="name">Info</label>
         <div class="flex sm:flex-row flex-col mb-4 ">
             <input class="border py-2 px-3 text-darkShade w-full" type="text" id="name" placeholder="Name" bind:value={name} />
-            <input class="border py-2 px-3 text-darkShade w-full md:ml-4 sm:ml-0" type="email" id="email" placeholder="Email" bind:value={email} />
+            <input class="border py-2 px-3 text-darkShade w-full md:ml-4 sm:ml-0 mt-2 sm:mt-0" type="email" id="email" placeholder="Email" bind:value={email} />
         </div>
-        <div class="flex flex-col mb-4">
+        <div class="flex flex-col mb-4">s
             <label class="mb-2 font-bold text-md text-darkShade" for="company">Company and Role</label>
             <input class="border py-2 px-3 text-darkShade" type="text" id="company" bind:value={company} 
                 placeholder="Tell me a little about yourself" />
