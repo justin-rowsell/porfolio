@@ -4,9 +4,9 @@
 </script>
 
 <nav class="flex items-center justify-between flex-wrap p-6 mb-5">
-    <div class="flex items-center flex-shrink-0 mr-6">
+    <div class="flex items-center mr-6">
       <a href="/">
-        <img class="h-6 mr-3 sm:h-9" src="{logo}" alt="Aquaberry Icon"/>
+        <img class="mr-3 h-9" src="{logo}" alt="Aquaberry Icon"/>
       </a>
     </div>
     <!-- <div class="block sm:hidden">
@@ -14,8 +14,8 @@
         <svg class="fill-main h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
       </button>
     </div> -->
-    <div class="block flex-grow md:flex md:items-center md:justify-center sm:hidden">
-        <div class="text-sm md:flex-grow">
+    <div class="flex flex-grow sm:items-center sm:justify-start items-end justify-end">
+        <div class="text-sm md:flex-grow flex-col">
           <NavLink link={'/contact'} iconCode={'chat'} linkText={'Contact Me'} />
           <NavLink link={'https://github.com/justin-rowsell'} iconCode={'code'} linkText={'Github'} />
         </div>

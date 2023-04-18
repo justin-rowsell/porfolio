@@ -22,7 +22,7 @@
         }
     }
 </script>
-<canvas class="absolute right-0 w-4/6 -z-50 top-28 md:top-3" bind:this={el}></canvas>
+<canvas class="absolute right-0 w-4/6 -z-50 top-28 md:top-3 hidden sm:block" bind:this={el}></canvas>
 <div class="absolute container h-screen flex flex-col 
             lg:p-28 md:p-16 sm:p-8">
     <div class="flex flex-row justify-center">
