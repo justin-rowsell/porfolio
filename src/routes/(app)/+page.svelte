@@ -1,5 +1,5 @@
 <script>
-	import LandingSection from "../lib/landing-section.svelte";
+	import LandingSection from "../../lib/landing-section.svelte";
 
 </script>
 <div class="flex flex-col">

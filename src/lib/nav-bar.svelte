@@ -1,9 +1,11 @@
 <script lang="ts">
   import logo from '$lib/assets/LogoTransparent.png';  
 	import NavLink from './nav-link.svelte';
+
+  export let hoverColor: string;
 </script>
 
-<nav class="flex items-center justify-between flex-wrap p-6 mb-5">
+<nav class="flex items-center justify-between flex-wrap p-6 mb-5 bg-transparent">
     <div class="flex items-center mr-6">
       <a href="/">
         <img class="mr-3 h-9" src="{logo}" alt="Aquaberry Icon"/>
@@ -16,8 +18,9 @@
     </div> -->
     <div class="flex flex-grow sm:items-center sm:justify-start items-end justify-end">
         <div class="text-sm md:flex-grow flex-col">
-          <NavLink link={'/contact'} iconCode={'chat'} linkText={'Contact Me'} />
-          <NavLink link={'https://github.com/justin-rowsell'} iconCode={'code'} linkText={'Github'} />
+          <NavLink link={'/contact'} iconCode={'chat'} linkText={'Contact Me'} hoverColor={hoverColor}/>
+          <NavLink link={'https://github.com/justin-rowsell'} iconCode={'code'} linkText={'Github'} hoverColor={hoverColor}/>
+          <NavLink link={'/blog'} iconCode={'book'} linkText={'Blog'} hoverColor={hoverColor} />
         </div>
     </div>
 </nav>
