@@ -6,4 +6,5 @@ export class Blog {
     public image: string | undefined;
     public created: Date | undefined;
     public updated: Date | undefined;
+    public publish_date: Date | undefined;
 }

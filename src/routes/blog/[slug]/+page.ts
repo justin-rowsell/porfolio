@@ -10,7 +10,6 @@ export async function load({ params }) {
         
         const blogId = params.slug;
         const blog = await pb.collection('blogs').getOne<Blog>(blogId);
-        console.log(blog);
         if (blog != undefined) {
             return blog;
         }

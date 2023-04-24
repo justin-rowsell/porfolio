@@ -13,9 +13,9 @@ module.exports = {
         danger: '#F44336',
         success: '#777A38',
         warning: '#F56A00',
-        blogPrimary: '#394867',
+        blogPrimary: 'black',
         blogSecondary: '#F1F6F9',
-        blogAccent: '#212A3E'
+        blogAccent: '#394867'
       },
     },
   },
