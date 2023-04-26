@@ -16,11 +16,15 @@ export async function load({ params }) {
                 if (b.publish_date == undefined) {
                     return -1;
                 }
-                return b.publish_date.getTime() - a.publish_date.getTime();
+                return new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime();
             })
         };
-    } catch(error) {
-        throw error(500, 'Something went wrong. Please try again later or let me know my website stinks in the contact form.');
-        console.error(error);
+    } catch(err) {
+        const errStr = err.toString();
+        throw error(500, {
+            message: 'Something went wrong. Please try again later or let me know my website stinks in the <a href="/contact">contact form</a>',
+            exception: errStr
+        });
+        console.error(err);
     }
 }

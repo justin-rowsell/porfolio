@@ -7,7 +7,7 @@
             <input class="border py-2 px-3 text-darkShade w-full" type="text" id="name" placeholder="Name" bind:value={name} />
             <input class="border py-2 px-3 text-darkShade w-full md:ml-4 sm:ml-0 mt-2 sm:mt-0" type="email" id="email" placeholder="Email" bind:value={email} />
         </div>
-        <div class="flex flex-col mb-4">s
+        <div class="flex flex-col mb-4">
             <label class="mb-2 font-bold text-md text-darkShade" for="company">Company and Role</label>
             <input class="border py-2 px-3 text-darkShade" type="text" id="company" bind:value={company} 
                 placeholder="Tell me a little about yourself" />

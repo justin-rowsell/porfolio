@@ -3,6 +3,6 @@
     import NavBar from "$lib/nav-bar.svelte";
     import "../../app.css";
 </script>
-<NavBar></NavBar>
+<NavBar  hoverColor={'text-main'} />
 <slot />
 <Analytics/>

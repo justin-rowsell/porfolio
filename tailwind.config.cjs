@@ -14,8 +14,9 @@ module.exports = {
         success: '#777A38',
         warning: '#F56A00',
         blogPrimary: 'black',
-        blogSecondary: '#F1F6F9',
-        blogAccent: '#394867'
+        blogSecondary: '#F2E3DB',
+        blogAccent: '#E86A33',
+        blogLinks: '#263A29'
       },
     },
   },
