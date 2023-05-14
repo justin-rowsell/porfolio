@@ -13,10 +13,16 @@ module.exports = {
         danger: '#F44336',
         success: '#777A38',
         warning: '#F56A00',
+        // styles for my blog
         blogPrimary: 'black',
         blogSecondary: '#F2E3DB',
         blogAccent: '#E86A33',
-        blogLinks: '#263A29'
+        blogLinks: '#263A29',
+        // styles for my photo portfolio
+        photosPrimary: 'black',
+        photosSecondary: '#F2E3DB',
+        photosAccent: '#E86A33',
+        photosLinks: '#263A29'
       },
     },
   },

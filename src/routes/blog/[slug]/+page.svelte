@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Blog } from '$lib/blog/blog.js';
+	import type { Blog } from '$lib/models/blog/blog.js';
 	import { pb } from '$lib/pocketbase.js';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';

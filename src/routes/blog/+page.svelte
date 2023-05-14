@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-	import type { Blog } from '$lib/blog/blog';
+	import type { Blog } from '$lib/models/blog/blog';
 	import BlogPreview from '$lib/blog/blog-preview.svelte';
 	import type { PageData } from './$types';    
     export let data: PageData;

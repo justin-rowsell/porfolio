@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types.js';
 import { pb } from '$lib/pocketbase.js';
-import type { Blog } from '$lib/blog/blog.js';
+import type { Blog } from '$lib/models/blog/blog.js';
 import { marked } from 'marked';
 
 

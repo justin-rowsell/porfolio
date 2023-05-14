@@ -1,14 +1,14 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types.js';
 import { pb } from '$lib/pocketbase.js';
-import type { Blog } from '$lib/models/blog/blog.js';
+import type { Photo } from '$lib/models/photos/photo.js';
 
 
 export async function load({ params }) {
     try{
-        const blogRes = await pb.collection('blogs').getList<Blog>();
+        const photoRes = await pb.collection('photos').getList<Photo>();
         return {
-            blogs: blogRes.items.sort((a, b) => {
+            photos: photoRes.items.sort((a, b) => {
                 // sort blog post by publish date
                 if (a.publish_date == undefined) {
                     return 1;

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import type { Blog } from "./blog";
+	import type { Blog } from "../models/blog/blog";
     export let blog: Blog;
     let formattedBlogDate: string | undefined;
     onMount(async () => {
