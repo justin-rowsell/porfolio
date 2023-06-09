@@ -30,9 +30,6 @@
         <div class="mx-auto p-4">
             <div class="flex flex-col items-center justify-center">
                 <h1 class="text-5xl font-bold text-center p-8 text-blogAccent">{blog.title}</h1>
-                <p class="text-md text-left max-w-3/4 pb-8">
-                    {blog.description}
-                </p>
             </div>
         </div>
         <!--render the markdown for the blog-->
@@ -43,11 +40,17 @@
                     {formattedBlogDate}
                 </div>
             </div>
+            <div class="flex">
+                <div class="flex-grow"></div>
+                <div class="flex-none text-blogAccent text-sm pb-8">
+                    Justin Rowsell
+                </div>
+            </div>
             <div class="[&>h1]:text-2xl [&>h1]:py-4 [&>h1]:text-blogAccent 
                 [&>h2]:text-xl [&>h2]:py-4 [&>h2]:text-blogAccent 
                 [&>h3]:text-lg [&>h3]:py-4 [&>h3]:text-blogAccent 
                 [&>p]:text-blogPrimary [&>p]:text-md
-                pb-8">
+                pb-8 hover:text-blue-800 visited:text-purple-600">
                 {@html content}
             </div>
         </div> 
