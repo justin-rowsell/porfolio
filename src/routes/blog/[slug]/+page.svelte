@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Blog } from '$lib/models/blog/blog.js';
-	import { pb } from '$lib/pocketbase.js';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
     
@@ -13,7 +12,7 @@
     onMount(async () => {
         blog = data.blog;
         content = data.content;
-        if (blog) {
+        if (blog && blog.publish_date != undefined) {
             formattedBlogDate = new Date(blog.publish_date).toLocaleDateString();
         } else {
             //if blog not found set flag to show not found html

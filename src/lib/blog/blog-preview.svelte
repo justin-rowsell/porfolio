@@ -3,9 +3,11 @@
 	import type { Blog } from "../models/blog/blog";
     export let blog: Blog;
     let formattedBlogDate: string | undefined;
+    let slugName: string;
     onMount(async () => {
-        if (blog) {
+        if (blog && blog.publish_date != undefined && blog.title != undefined) {
             formattedBlogDate = new Date(blog.publish_date).toLocaleDateString();
+            slugName = blog.title.replace(/\s+/g, '-');
         }
     });
 </script>
@@ -16,7 +18,7 @@
         <div class="flex flex-col items-start justify-start ">
             <h1 class="text-xl font-bold text-left text-blogAccent pb-2">{blog.title}</h1>
             <p class="text-md text-left text-blogPrimary">{blog.description}</p>
-            <a href="blog/{blog.id}" class="justify-end items-end mt-auto"> 
+            <a href="blog/{slugName}" class="justify-end items-end mt-auto"> 
                 <span class="text-md text-right underline text-blogAccent hover:text-blogPrimary">Read More</span>
             </a>
         </div>
@@ -24,5 +26,4 @@
             <p class="text-md text-left text-blogPrimary">{formattedBlogDate}</p>
         </div>
     </div>
-    
 </div>

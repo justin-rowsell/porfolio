@@ -14,7 +14,7 @@
 
 <!--Home page for my personal blog. Landing page section at top of page and list the blogs below-->
 <!--Using tailwaindcss extended colors. blogPrimary is for text, blogSecondary for the bg-->
-<div class="bg-blogSecondary text-blogAccent h-full md:px-20 px-4">
+<div class="bg-blogSecondary text-blogAccent min-h-screen> md:px-20 px-4">
     <div class="container mx-auto pb-16">
         <div class="flex flex-col items-center justify-center">
             <h1 class="text-4xl m-12 md:text-5xl md:m-16 font-bold text-center">Justin Rowsell's Blog</h1>
