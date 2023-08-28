@@ -20,6 +20,10 @@
         }
 	});
 </script>
+<svelte:head>
+  <title>{blog?.title ?? "Justin's Blog"}</title>
+  <meta name="description" content={blog?.description ?? ""} />
+</svelte:head>
 {#if blog != undefined}
     <div class="flex flex-col items-center justify-center w-full max-h-44 overflow-hidden">
         <img src={blog.image} alt={blog.title} />

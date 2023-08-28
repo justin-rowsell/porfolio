@@ -11,7 +11,10 @@
         blogs = data.blogs;
 	});
 </script>
-
+<svelte:head>
+  <title>Justin's Blog | Home</title>
+  <meta name="description" content="Home page for Justin Rowsell's personal blog" />
+</svelte:head>
 <!--Home page for my personal blog. Landing page section at top of page and list the blogs below-->
 <!--Using tailwaindcss extended colors. blogPrimary is for text, blogSecondary for the bg-->
 <div class="bg-blogSecondary text-blogAccent min-h-screen> md:px-20 px-4">

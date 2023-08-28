@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Justin Rowsell | Contact</title>
+  <meta name="description" content="Contact Justin Rowsell today" />
+</svelte:head>
 <div class="lg:w-1/2 md:w-3/4 w-11/12 m-auto shadow-xl p-4 bg-lightShade"> 
     <h1 class="text-2xl font-bold text-center text-darkShade">Contact Me</h1>
     <p class="text-left text-darkShade">Interested in working together? You can reach me here. Or just say hi (I'm a person)!</p>
