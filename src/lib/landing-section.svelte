@@ -25,7 +25,7 @@
 <canvas class="absolute right-0 w-4/6 -z-50 top-28 md:top-3 hidden sm:block" bind:this={el}></canvas>
 <div class="absolute container h-screen flex flex-col 
             lg:p-28 md:p-16 sm:p-8">
-    <div class="flex flex-row justify-center">
+    <div class="flex flex-row justify-center pt-16">
         <img src="{headshot}" alt="Justin Rowsell Headshot" 
         class="w-36 h-36 rounded-full object-cover flex mr-8">
         <div>

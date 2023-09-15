@@ -2,6 +2,9 @@
 	import type { Blog } from '$lib/models/blog/blog.js';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
+	import Twitter from '$lib/share/twitter.svelte';
+	import Linkedin from '$lib/share/linkedin.svelte';
+	import Footer from '$lib/footer.svelte';
     
     export let data: PageData;
     let blog: Blog | undefined;
@@ -58,6 +61,10 @@
             </div>
         </div> 
     </div>
+    <Footer footerTitle="Share this blog">
+        <Twitter url={window.location.href} text={blog?.title ?? ""} />
+        <Linkedin url={window.location.href} />
+    </Footer>
 {:else}
     <div class="container h-screen ">
 
