@@ -1,5 +1,5 @@
 <script lang="ts">
-  import logo from '$lib/assets/LogoTransparent.png';  
+  import favicon from '$lib/assets/favicon.png';  
 	import NavLink from './nav-link.svelte';
 
   export let hoverColor: string;
@@ -8,7 +8,7 @@
 <nav class="flex items-center justify-between flex-wrap p-6 mb-5 bg-transparent">
     <div class="flex items-center mr-6">
       <a href="/">
-        <img class="mr-3 h-9" src="{logo}" alt="Aquaberry Icon"/>
+        <img class="mr-3 h-9" src="{favicon}" alt="Aquaberry Icon"/>
       </a>
     </div>
     <!-- <div class="block sm:hidden">
