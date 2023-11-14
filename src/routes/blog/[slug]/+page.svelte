@@ -5,6 +5,7 @@
 	import Twitter from '$lib/share/twitter.svelte';
 	import Linkedin from '$lib/share/linkedin.svelte';
 	import Footer from '$lib/footer.svelte';
+	import { pb } from '$lib/pocketbase';
 
 	export let data: PageData;
 	let blog: Blog | undefined;
@@ -21,6 +22,8 @@
 			//if blog not found set flag to show not found html
 			showBlogNotFound = true;
 		}
+		// update view count
+		await pb.collection('blogs').update<Blog>(blog.id as string, { views: (blog?.views ?? 0) + 1},{});
 	});
 </script>
 
