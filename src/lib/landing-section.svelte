@@ -27,12 +27,15 @@
     <div class="flex flex-row justify-center pt-16">
         <img src="{headshot}" alt="Justin Rowsell Headshot" 
         class="w-36 h-36 rounded-full object-cover flex mr-8">
-        <div>
-            <p class="font-sans text-md w-full text-left text-darkShade m-0 p-0">Hi, my name is</p>
+        <div class="text-lg">
+            <p class="font-sans w-full text-left text-darkShade m-0 p-0">Hi, my name is</p>
             <span class="font-sans text-4xl w-full font-bold text-left text-main mt-0 pt-0">Justin Rowsell</span>
-            <p class="font-sans text-sm w-full text-left text-darkShade m-0 p-0">
-                I'm an <span class="font-bold">Independent Full-Stack GIS Software Engineer</span><br/>
-                creating innovative solutions with businesses working in climate tech.
+            <p class="font-sans w-full text-left text-darkShade m-0 p-0">
+                I'm a <span class="font-bold">Climate Tech Founder and Freelance Software Engineer</span><br/>
+                creating innovative solutions for a better world at Aquaberry<br/>
+                and helping others do the same.<br/>
+                <!-- and link to the aquaberry site-->
+                <a href="https://www.aquaberry.io" class="font-bold">Aquaberry.io</a>
             </p>
         </div>
     </div> 
@@ -45,7 +48,7 @@
         </button>
         <button class="bg-darkAccent hover:bg-darkShade text-white font-bold rounded-full
             flex items-center py-2 px-4 mb-4 sm:mb-0"
-            on:click={() => goToLink('https://aquaberry.vercel.app/', true)}>
+            on:click={() => goToLink('https://aquaberry.io/services', true)}>
             <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M180 936q-24.75 0-42.375-17.625T120 876V276q0-24.75 17.625-42.375T180 216h600q24.75 0 42.375 17.625T840 276v600q0 24.75-17.625 42.375T780 936H180Zm0-60h600V356H180v520Zm300.041-105Q400 771 337 727.849q-63-43.152-92-112Q274 547 336.959 504t143-43Q560 461 623 504.151q63 43.152 92 112Q686 685 623.041 728t-143 43ZM480 721q57 0 104.949-27.825T660 616q-27.102-49.35-75.051-77.175Q537 511 480 511t-104.949 27.825Q327.102 566.65 300 616q27.102 49.35 75.051 77.175Q423 721 480 721Zm0-105Zm.118 50Q501 666 515.5 651.382q14.5-14.617 14.5-35.5Q530 595 515.382 580.5q-14.617-14.5-35.5-14.5Q459 566 444.5 580.618q-14.5 14.617-14.5 35.5Q430 637 444.618 651.5q14.617 14.5 35.5 14.5Z"/></svg>
             <span>Recent Work</span>
         </button>
