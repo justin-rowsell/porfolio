@@ -22,9 +22,8 @@
         }
     }
 </script>
-<canvas class="absolute right-0 w-4/6 -z-50 top-28 md:top-3 hidden sm:block" bind:this={el}></canvas>
-<div class="absolute container h-screen flex flex-col 
-            lg:p-28 md:p-16 sm:p-8">
+<canvas class="absolute right-0 w-full -z-50 top-28 md:top-3 hidden sm:block" bind:this={el}></canvas>
+<div class="absolute w-full mx-auto h-screen flex flex-col lg:p-28 md:p-16 sm:p-8">
     <div class="flex flex-row justify-center pt-16">
         <img src="{headshot}" alt="Justin Rowsell Headshot" 
         class="w-36 h-36 rounded-full object-cover flex mr-8">
@@ -37,7 +36,7 @@
             </p>
         </div>
     </div> 
-    <div class="flex flex-col sm:flex-row w-3/4 mt-16 flex-wrap justify-around mx-auto">        
+    <div class="flex flex-col sm:flex-row w-3/4 max-w-[800px] mt-16 flex-wrap justify-around mx-auto">        
         <button class="bg-darkAccent hover:bg-darkShade text-white font-bold rounded-full
             flex items-center py-2 px-4 mb-4 sm:mb-0"
             on:click={() => goToLink('/contact', false)}>
